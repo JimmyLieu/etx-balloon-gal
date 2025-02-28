@@ -1,0 +1,34 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .loading-screen.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .logo-container {
+    transform-origin: center;
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .loading-logo {
+    width: 300px;
+    height: auto;
+  }
+  
+  .logo-container.zoom-out {
+    transform: scale(0.2);
+  }

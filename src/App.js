@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import LoadingScreen from './components/LoadingScreen';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Start transition after 1 second
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LoadingScreen isLoading={isLoading} />
+      <Navbar />
+      <Hero />
     </div>
   );
 }
