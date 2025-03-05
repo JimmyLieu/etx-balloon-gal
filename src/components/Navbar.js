@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../assets/ETXLogo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,21 +13,21 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <a href="#home" className="navbar__link">Home</a>
-        <a href="#about" className="navbar__link">About</a>
-        <a href="#services" className="navbar__link">Services</a>
+        <Link to="/" className="navbar__link">Home</Link>
+        <Link to="/about" className="navbar__link">About</Link>
+        <Link to="/services" className="navbar__link">Services</Link>
       </div>
 
       <div className="navbar__brand">
-        <a href="/">
-        <img src = {logo} alt = "ETX Logo" className="navbar__logo" />
-        </a>
+        <Link to="/">
+          <img src={logo} alt="ETX Logo" className="navbar__logo" />
+        </Link>
       </div>
 
       <div className="navbar__right">
-        <a href="#pricing" className="navbar__link">Pricing</a>
-        <a href="/gallery" className="navbar__link">Gallery</a>
-        <a href="#contact" className="navbar__link">Contact</a>
+        <Link to="/pricing" className="navbar__link">Pricing</Link>
+        <Link to="/gallery" className="navbar__link">Gallery</Link>
+        <Link to="/contact" className="navbar__link">Contact</Link>
       </div>
 
       <button className="navbar__toggle" onClick={toggleMenu}>
@@ -34,12 +35,12 @@ const Navbar = () => {
       </button>
 
       <div className={`navbar__mobile-menu ${isOpen ? 'active' : ''}`}>
-        <a href="#home" className="navbar__link">Home</a>
-        <a href="#about" className="navbar__link">About</a>
-        <a href="#services" className="navbar__link">Services</a>
-        <a href="#pricing" className="navbar__link">Pricing</a>
-        <a href="#gallery" className="navbar__link">Gallery</a>
-        <a href="#contact" className="navbar__link">Contact</a>
+        <Link to="/" className="navbar__link">Home</Link>
+        <Link to="/about" className="navbar__link">About</Link>
+        <Link to="/services" className="navbar__link">Services</Link>
+        <Link to="/pricing" className="navbar__link">Pricing</Link>
+        <Link to="/gallery" className="navbar__link">Gallery</Link>
+        <Link to="/contact" className="navbar__link">Contact</Link>
       </div>
     </nav>
   );
