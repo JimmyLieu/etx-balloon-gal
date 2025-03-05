@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingScreen.css';
-import logo from '../components/assets/ETXLogo.png'; 
+import logo from '../assets/ETXLogo.png'; 
 
 const LoadingScreen = ({ isLoading }) => {
     console.log("Loading state:", isLoading); // Add this to debug

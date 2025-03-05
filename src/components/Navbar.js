@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../components/assets/ETXLogoTransparent.png';
+import logo from '../assets/ETXLogo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
 
       <div className="navbar__right">
         <a href="#pricing" className="navbar__link">Pricing</a>
-        <a href="#gallery" className="navbar__link">Gallery</a>
+        <a href="/gallery" className="navbar__link">Gallery</a>
         <a href="#contact" className="navbar__link">Contact</a>
       </div>
 

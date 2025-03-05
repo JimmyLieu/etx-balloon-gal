@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../components/assets/LuffyBalloon.jpg'); /* You'll need to add your own image */
+    background-image: url('../assets/LuffyBalloon.jpg'); 
     background-size: cover;
     background-position: center;
     overflow: hidden;
