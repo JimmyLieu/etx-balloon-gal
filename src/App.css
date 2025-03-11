@@ -45,6 +45,5 @@
 
 @media screen and (max-width: 768px) {
   .page-content {
-    padding-top: 120px; /* Adjust for mobile */
   }
 }

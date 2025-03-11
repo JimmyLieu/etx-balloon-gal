@@ -3,7 +3,7 @@ import './Gallery.css';
 
 const Gallery = () => {
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  // Import all images from the assets folder
+  
   const importAll = (r) => r.keys().map(r);
   const images = importAll(require.context('../assets/samplePics', true, /\.(png|jpe?g|svg)$/));   
 
@@ -18,6 +18,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
+      <h1 className="gallery-title">Our Gallery</h1>
       <div className="gallery-grid">
         {galleryData.map(item => (
           <div key={item.id} className="gallery-item">
