@@ -56,7 +56,7 @@
     text-decoration: none;
     font-weight: thin;
     transition: color 0.3s ease;
-    font-family: var(--font-AzeretMono);
+    font-family: var(--font-Cabinet);
 
   }
   
@@ -144,8 +144,7 @@
     }
   
     .navbar__mobile-menu .navbar__link {
-      font-family: var(--font-navbar);
-      display: block;
+      font-family: var(--font-Cabinet);      display: block;
       padding: 1rem 2rem;
       text-align: center;
     }

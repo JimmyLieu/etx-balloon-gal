@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../assets/ETXLogo.png';
+import logo from '../assets/ETXLogoTransparent.png';
 import { Link } from 'react-router-dom';
 import '../styles/fonts.css'; 
 

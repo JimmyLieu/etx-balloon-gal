@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Landing.css';
 // Import your images
 import heroImage from '../assets/samplePics/bio.jpg';
+import installation from '../assets/samplePics/sample20.jpeg';
 
 
 // Service data
@@ -11,7 +12,7 @@ const services = [
   {
     title: "Custom Installations",
     description: "Bespoke balloon designs delivered and installed by us",
-    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
+    image: installation,  // Temporary placeholder
     alt: "Custom balloon installation"
   },
   {

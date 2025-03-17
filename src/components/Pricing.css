@@ -1,35 +1,118 @@
-.pricing-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.price-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.price-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: var(--font-Cabinet);
+}
+
+.price-section {
+  margin-bottom: 3rem;
+  font-family: var(--font-Cabinet);
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ff4d8d;
+  color: #333;
+  font-family: var(--font-Cabinet);
+}
+
+.subcategory-section {
+  margin-bottom: 2rem;
+}
+
+.subcategory-title {
+  font-family: var(--font-Cabinet);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #ff4d8d;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0 0 0 1rem;
+}
+
+.price-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid #ff4d8d;
+  font-weight: bold;
+  color: #333;
+}
+
+.price-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-width: 200px;
+  text-align: right;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  font-family: var(--font-Cabinet);
+}
+
+.item-name {
+  flex: 1;
+  padding-right: 1rem;
+  font-family: var(--font-Cabinet);
+  text-align: left;
+}
+
+.item-price {
+  font-family: var(--font-Cabinet);
+  font-weight: bold;
+  color: #ff4d8d;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .price-container {
+    padding: 1rem;
+  }
+
+  .price-title {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .subcategory-title {
+    font-size: 1.1rem;
+  }
+
+  .price-item {
+    padding: 0.5rem 0;
+  }
+
+  .price-columns {
+    min-width: 150px;
+    gap: 1rem;
   }
   
-  .pdf-container {
-    width: 100%;
-    height: 800px;
-    margin: 2rem auto;
-    display: flex;
-    justify-content: center;
-    background: transparent;
+  .price-header {
+    font-size: 0.9rem;
   }
-  
-  .pdf-container iframe {
-    max-width: 100%;
-    background: transparent;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .pricing-container {
-      padding: 1rem;
-    }
-    
-    .pdf-container {
-      height: 600px;
-    }
-  }
+}

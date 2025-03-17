@@ -10,9 +10,9 @@ const Header = () => {
           <FaPhone className="header-icon" />
           <span>+1 (903) 724-0084</span>
         </a>
-        <a href="mailto:info@example.com" className="header-item">
+        <a href="mailto:etxballoongal@gmail.com " className="header-item">
           <FaEnvelope className="header-icon" />
-          <span>info@example.com</span>
+          <span>etxballoongal@gmail.com </span>
         </a>
       </div>
       <div className="header-right">
