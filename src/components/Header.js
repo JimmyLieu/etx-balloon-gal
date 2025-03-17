@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header-left">
         <a href="tel:+1234567890" className="header-item">
           <FaPhone className="header-icon" />
-          <span>(123) 456-7890</span>
+          <span>+1 (903) 724-0084</span>
         </a>
         <a href="mailto:info@example.com" className="header-item">
           <FaEnvelope className="header-icon" />

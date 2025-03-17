@@ -11,47 +11,46 @@ const services = [
   {
     title: "Custom Installations",
     description: "Bespoke balloon designs delivered and installed by us",
+    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
     alt: "Custom balloon installation"
   },
   {
     title: "Helium Balloons",
     description: "Bouquets, centerpieces, and custom jumbo balloons",
+    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
     alt: "Helium balloon display"
   },
   {
     title: "Event Decorations",
     description: "Complete event decoration services",
+    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
     alt: "Event decoration setup"
   }
 ];
 
 const Landing = () => {
-  // Animation variants
+  // Update animation variants to be less restrictive
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0 },  // Removed y transform
     visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6 }
+      opacity: 1,
+      transition: { duration: 0.4 }
     }
   };
 
   const staggerContainer = {
-    hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   };
 
   const scaleIn = {
-    hidden: { scale: 0.8, opacity: 0 },
+    hidden: { opacity: 0 },
     visible: { 
-      scale: 1, 
       opacity: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.3 }
     }
   };
 
@@ -92,12 +91,34 @@ const Landing = () => {
         </div>
       </motion.section>
 
+      {/* Scrolling Banner */}
+      <div className="scrolling-banner">
+        <div className="banner-content">
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+          <span>PARTY WITH ETX! </span>
+        </div>
+      </div>
+
       {/* Services Grid with Images */}
       <motion.section 
         className="services-showcase"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }} // Reduced amount
         variants={staggerContainer}
       >
         {services.map((service, index) => (
@@ -122,7 +143,7 @@ const Landing = () => {
         className="portfolio-preview"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }} // Reduced amount
         variants={fadeIn}
       >
         <div className="portfolio-image-container">
@@ -143,7 +164,7 @@ const Landing = () => {
         className="testimonials"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }} // Reduced amount
         variants={staggerContainer}
       >
         <h2>What Our Clients Say</h2>
@@ -166,7 +187,7 @@ const Landing = () => {
         className="final-cta"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }} // Reduced amount
         variants={fadeIn}
       >
         <h2>Ready to Create Something Amazing?</h2>
