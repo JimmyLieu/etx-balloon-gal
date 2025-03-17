@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import mariaImage from '../assets/samplePics/bio.jpg';
 
 const About = () => {
   return (
@@ -9,11 +10,11 @@ const About = () => {
         
         <div className="founder-section">
           <div className="founder-image">
-            {/* Placeholder for Maria's image */}
-            <div className="image-placeholder">
-              <span>Maria Rodriguez</span>
-              <span className="subtitle">Founder & Creative Director</span>
-            </div>
+          <img 
+              src={mariaImage} 
+              alt="Maria Rodriguez - ETX Balloon Gal Founder"
+              className="founder-img"
+            />      
           </div>
           
           <div className="founder-story">

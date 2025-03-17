@@ -1,12 +1,14 @@
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Landing from './components/Landing';
 import Gallery from './components/Gallery';
 import About from './components/About';
+import Pricing from './components/Pricing';
 import LoadingScreen from './components/LoadingScreen';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/fonts.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,13 +28,10 @@ function App() {
         <Navbar />
         <div className="page-content">
           <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-              </>
-            } />
+            <Route path="/" element={<Landing />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </div>
       </div>

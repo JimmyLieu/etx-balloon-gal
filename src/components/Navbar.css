@@ -54,8 +54,10 @@
   .navbar__link {
     color: #333;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: thin;
     transition: color 0.3s ease;
+    font-family: var(--font-AzeretMono);
+
   }
   
   .navbar__link:hover {
@@ -142,6 +144,7 @@
     }
   
     .navbar__mobile-menu .navbar__link {
+      font-family: var(--font-navbar);
       display: block;
       padding: 1rem 2rem;
       text-align: center;
