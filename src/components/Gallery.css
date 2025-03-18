@@ -1,7 +1,7 @@
 .gallery-container {
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
   
 .gallery-container h1 {
@@ -11,69 +11,71 @@
     font-family: var(--font-Cabinet);
 }
   
-.category-filter {
+.folders-section {
     display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    justify-content: center;
 }
   
-.category-filter button {
-    padding: 0.5rem 1rem;
+.folder-button {
+    padding: 8px 16px;
     border: none;
-    border-radius: 25px;
-    background: #f0f0f0;
+    background-color: #f0f0f0;
+    border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: var(--font-Cabinet);
+    transition: background-color 0.3s ease;
 }
   
-.category-filter button.active {
-    background: #ff4d8d;
-    color: white;
+.folder-button:hover {
+    background-color: #e0e0e0;
 }
   
-.category-filter button:hover {
-    background: #ff4d8d;
-    color: white;
-}
-  
-.gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-  
-.category-section h2 {
-    margin-bottom: 1rem;
-    color: #333;
-    font-family: var(--font-Cabinet);
+.upload-section {
+    margin-bottom: 20px;
+    text-align: center;
 }
   
 .images-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 20px;
+    padding: 20px;
 }
   
 .image-card {
     position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+  
+.image-card:hover {
+    transform: scale(1.02);
 }
   
 .image-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
   
-.image-card:hover img {
-    transform: scale(1.05);
+.load-more-button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.load-more-button:hover {
+    background-color: #0056b3;
 }
   
 .loading {
@@ -81,9 +83,7 @@
     padding: 40px;
     font-size: 1.2em;
     color: #666;
-  }
-  
-  
+}
   
 @media (max-width: 768px) {
     .gallery-container {
@@ -95,11 +95,7 @@
       gap: 1rem;
     }
     
-    .category-filter {
-      gap: 0.5rem;
-    }
-    
-    .category-filter button {
+    .folder-button {
       padding: 0.4rem 0.8rem;
       font-size: 0.9rem;
     }

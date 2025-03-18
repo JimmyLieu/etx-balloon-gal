@@ -56,37 +56,43 @@ const Admin = () => {
   };
 
   const handleUpload = async (file) => {
-    if (!process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || !process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET) {
-      setUploadError('Missing Cloudinary configuration');
-      return;
-    }
-
     try {
       const formData = new FormData();
       formData.append('file', file);
       formData.append('upload_preset', process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
 
-      const response = await fetch(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/upload`, {
-        method: 'POST',
-        body: formData
-      });
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/upload`,
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
 
       const data = await response.json();
       
-      if (!response.ok) {
-        throw new Error(data.error?.message || 'Upload failed');
+      if (data.secure_url) {
+        // Save the new image to localStorage
+        const newImage = {
+          url: data.secure_url,
+          public_id: data.public_id
+        };
+
+        // Get existing images
+        const existingImages = JSON.parse(localStorage.getItem('uploadedImages') || '[]');
+        
+        // Add new image
+        const updatedImages = [newImage, ...existingImages];
+        
+        // Save back to localStorage
+        localStorage.setItem('uploadedImages', JSON.stringify(updatedImages));
+
+        // Update state if needed
+        setGalleryImages(updatedImages);
       }
-
-      // Add new image to state
-      setGalleryImages(prev => [...prev, {
-        url: data.secure_url,
-        public_id: data.public_id,
-        created_at: new Date().toISOString()
-      }]);
-
     } catch (error) {
       console.error('Upload error:', error);
-      setUploadError(error.message);
+      alert('Upload failed');
     }
   };
 
