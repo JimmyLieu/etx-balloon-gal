@@ -110,7 +110,11 @@ const Contact = () => {
         <div className="contact-details">
           <div className="contact-item">
             <h3>Location</h3>
-            <p>Tyler, TX</p>
+            <p>Palestine, TX </p>
+          </div>
+          <div className="contact-item">
+            <h3>Serving East Texas & Surrounding Areas</h3>
+            
           </div>
           
           <div className="contact-item">

@@ -10,6 +10,7 @@ import LoadingScreen from './components/LoadingScreen';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/fonts.css';
+import Admin from './components/Admin';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
       </div>
