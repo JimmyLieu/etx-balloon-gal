@@ -413,8 +413,8 @@ const PriceList = () => {
                       <li className="price-header">
                         <span className="item-name"></span>
                         <div className="price-columns">
-                          <span>Balloon Only</span>
-                          <span>Air-Filled</span>
+                          <span>Balloon</span>
+                          <span>Air</span>
                           <span>Helium</span>
                         </div>
                       </li>
@@ -434,7 +434,7 @@ const PriceList = () => {
                       <li className="price-header">
                         <span className="item-name"></span>
                         <div className="price-columns">
-                          <span>Air-Filled</span>
+                          <span>Air</span>
                           <span>Helium</span>
                         </div>
                       </li>
