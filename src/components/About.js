@@ -45,10 +45,7 @@ const About = () => {
               <h3>Custom Designs</h3>
               <p>Bringing your vision to life with personalized balloon arrangements</p>
             </div>
-            <div className="service-card">
-              <h3>Creative Freedom</h3>
-              <p>Trust our artistic expertise to create stunning displays that exceed expectations</p>
-            </div>
+           
             <div className="service-card">
               <h3>Mobile Service</h3>
               <p>Serving Palestine, TX and surrounding East Texas areas</p>

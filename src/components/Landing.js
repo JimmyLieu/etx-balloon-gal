@@ -5,6 +5,11 @@ import './Landing.css';
 // Import your images
 import heroImage from '../assets/samplePics/bio.jpg';
 import installation from '../assets/samplePics/sample20.jpeg';
+import helium from '../assets/samplePics/sample17.jpeg';
+import decoration from '../assets/samplePics/sample18.jpeg';
+import portfolioImage1 from '../assets/samplePics/sample1.jpg';
+import portfolioImage2 from '../assets/samplePics/sample2.jpeg';
+import portfolioImage3 from '../assets/samplePics/sample3.jpeg';
 
 
 // Service data
@@ -12,19 +17,19 @@ const services = [
   {
     title: "Custom Installations",
     description: "Bespoke balloon designs delivered and installed by us",
-    image: installation,  // Temporary placeholder
+    image: installation,  
     alt: "Custom balloon installation"
   },
   {
     title: "Helium Balloons",
     description: "Bouquets, centerpieces, and custom jumbo balloons",
-    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
+    image: decoration,  
     alt: "Helium balloon display"
   },
   {
     title: "Event Decorations",
     description: "Complete event decoration services",
-    image: "https://via.placeholder.com/400x300",  // Temporary placeholder
+    image: helium,  
     alt: "Event decoration setup"
   }
 ];
@@ -134,7 +139,7 @@ const Landing = () => {
             </div>
             <h2>{service.title}</h2>
             <p>{service.description}</p>
-            <Link to="/services" className="learn-more">learn more</Link>
+            <Link to="/pricing" className="learn-more">learn more</Link>
           </motion.div>
         ))}
       </motion.section>
@@ -144,11 +149,19 @@ const Landing = () => {
         className="portfolio-preview"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }} // Reduced amount
+        viewport={{ once: true, amount: 0.1 }}
         variants={fadeIn}
       >
-        <div className="portfolio-image-container">
-         {/* <img src={portfolioPreview} alt="Portfolio preview" className="portfolio-image" /> */}
+        <div className="portfolio-grid">
+          <div className="portfolio-image-container">
+            <img src={portfolioImage1} alt="Portfolio preview 1" className="portfolio-image" />
+          </div>
+          <div className="portfolio-image-container">
+            <img src={portfolioImage2} alt="Portfolio preview 2" className="portfolio-image" />
+          </div>
+          <div className="portfolio-image-container">
+            <img src={portfolioImage3} alt="Portfolio preview 3" className="portfolio-image" />
+          </div>
         </div>
         <h2>View Our Work</h2>
         <p>Explore our gallery of unforgettable designs that have transformed events into extraordinary celebrations</p>
@@ -156,7 +169,7 @@ const Landing = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Link to="/gallery" className="view-portfolio">view our portfolio</Link>
+          <Link to="/gallery" className="view-portfolio">View Our Portfolio</Link>
         </motion.div>
       </motion.section>
 
