@@ -187,7 +187,7 @@ const PriceList = () => {
         {
           name: "DELIVERY CHARGES",
           items: [
-            { name: "Per Mile (from shop to destination)", price: "$3.00" },
+            { name: "Per Mile (from shop to destination)", price: "$1.75" },
             { name: "Minimum Distance", price: "5 miles" }
           ]
         },

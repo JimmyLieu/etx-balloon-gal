@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Gallery from './components/Gallery';
 import About from './components/About';
 import Pricing from './components/Pricing';
+import Contact from './components/Contact';
 import LoadingScreen from './components/LoadingScreen';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
